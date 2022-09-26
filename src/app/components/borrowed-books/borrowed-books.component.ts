@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Book from "../../models/Book";
+import { BookService } from "../../services/book-service/book.service";
 
 const BOOKS: Book[] = [
   {
@@ -37,9 +38,10 @@ export class BorrowedBooksComponent implements OnInit {
 
   books = BOOKS;
 
-  constructor() {
+  constructor(private bookService: BookService) {
   }
 
   ngOnInit(): void {
+    this.bookService.getAllBooks().subscribe(books => books.forEach(book => console.log(book)));
   }
 }

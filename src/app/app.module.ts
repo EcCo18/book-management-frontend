@@ -9,6 +9,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { BorrowComponent } from './components/borrow/borrow.component';
 import { BorrowedBooksComponent } from './components/borrowed-books/borrowed-books.component';
 import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './components/login/login.component';
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
