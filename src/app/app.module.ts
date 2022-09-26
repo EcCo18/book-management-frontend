@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavComponent } from './nav/nav.component';
-import { HomeComponent } from './home/home.component';
-import { AdminComponent } from './admin/admin.component';
-import { BorrowComponent } from './borrow/borrow.component';
-import { BorrowedBooksComponent } from './borrowed-books/borrowed-books.component';
+import { NavComponent } from './components/nav/nav.component';
+import { HomeComponent } from './components/home/home.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { BorrowComponent } from './components/borrow/borrow.component';
+import { BorrowedBooksComponent } from './components/borrowed-books/borrowed-books.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BorrowedBooksComponent } from './borrowed-books/borrowed-books.componen
     HomeComponent,
     AdminComponent,
     BorrowComponent,
-    BorrowedBooksComponent
+    BorrowedBooksComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
