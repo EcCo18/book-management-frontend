@@ -1,1 +1,26 @@
-<p>borrow works!</p>
+<div class="mt-3">
+  <h4>Bücher ausleihen</h4>
+  <p>
+    Die folgenden Bücher sind in der Firma zum Verleih verfügbar.
+  </p>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Dat. des Verleihs</th>
+      <th scope="col">ISBN</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books$ | async; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        {{ book.name }}
+      </td>
+      <td>{{ book.releaseYear}}</td>
+      <td>{{ book.isbn}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
