@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Book from "../../models/Book";
 
-const COUNTRIES: Book[] = [
+const BOOKS: Book[] = [
   {
     name: 'Building Microservices',
     isbn: '4354356564',
@@ -35,7 +35,7 @@ const COUNTRIES: Book[] = [
 })
 export class BorrowedBooksComponent implements OnInit {
 
-  countries = COUNTRIES;
+  books = BOOKS;
 
   constructor() {
   }
