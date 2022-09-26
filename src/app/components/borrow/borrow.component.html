@@ -8,17 +8,20 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
-      <th scope="col">Dat. des Verleihs</th>
+      <th scope="col">Autor(en)</th>
       <th scope="col">ISBN</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let book of books$ | async; index as i">
       <th scope="row">{{ i + 1 }}</th>
+      <td>{{ book.name }}</td>
       <td>
-        {{ book.name }}
+        <span *ngIf="book.authors.length === 0">
+          nicht bekannt
+        </span>
+        {{ book.authors}}
       </td>
-      <td>{{ book.releaseYear}}</td>
       <td>{{ book.isbn}}</td>
     </tr>
     </tbody>
