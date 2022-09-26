@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Book {
-  name: string;
-  isbn: string;
-  borrowDate: number;
-  author: string;
-}
+import Book from "../../models/Book";
 
 const COUNTRIES: Book[] = [
   {
@@ -15,21 +9,21 @@ const COUNTRIES: Book[] = [
     author: "146989754"
   },
   {
-    name: 'Canada',
+    name: 'Route 66',
     isbn: '345345345345',
-    borrowDate: 9976140,
+    borrowDate: 2001,
     author: "36624199"
   },
   {
     name: 'United States',
     isbn: '345643653',
-    borrowDate: 9629091,
+    borrowDate: 1978,
     author: "324459463"
   },
   {
-    name: 'China',
+    name: 'Die zweite Legion',
     isbn: '43543543543',
-    borrowDate: 9596960,
+    borrowDate: 2022,
     author: "1409517397"
   }
 ];
