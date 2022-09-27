@@ -3,6 +3,7 @@ import { ModalDismissReasons, NgbModal, NgbModalRef } from "@ng-bootstrap/ng-boo
 import { CreateBookModalComponent } from "./create-book-modal/create-book-modal.component";
 import NewBookData from "../../models/NewBookData";
 import { BookService } from "../../services/book-service/book.service";
+import { BookMapperService } from "../../services/mapper/book-mapper.service";
 
 @Component({
   selector: 'app-create-book',
@@ -15,7 +16,8 @@ export class CreateBookComponent implements OnInit {
 
   constructor(
     private modalService: NgbModal,
-    private bookService: BookService
+    private bookService: BookService,
+    private bookMapper: BookMapperService
   ) {}
 
   ngOnInit(): void {
@@ -32,7 +34,7 @@ export class CreateBookComponent implements OnInit {
 
   private subscribeToModalData(modalRef: NgbModalRef): void {
     modalRef.componentInstance.passEvent.subscribe((data: NewBookData) => {
-      this.bookService.postNewBook(data);
+      this.bookService.postNewBook(this.bookMapper.mapNewBookDataToDto(data));
     });
   }
 

@@ -17,6 +17,8 @@ export class BookService {
 
   postNewBook(newBook: NewBookData) {
     console.log("emitted post");
-    return this.http.post("http://localhost:8082/api/book", newBook);
+    return this.http.post("/api/book", newBook).subscribe(response =>
+      console.log(response)
+    );
   }
 }

@@ -18,7 +18,7 @@ export class CreateBookModalComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal) {
     this.newBookData = {name: "", isbn:""};
     this.form = new FormGroup({
-      bookName: new FormControl('', [Validators.required]),
+      name: new FormControl('', [Validators.required]),
       isbn: new FormControl('', [Validators.required])
     });
   }
@@ -27,6 +27,7 @@ export class CreateBookModalComponent implements OnInit {
   }
 
   passDataFromModal(): void {
+    console.log(this.form.value)
     this.passEvent.emit(this.form.value);
     this.activeModal.dismiss();
   }

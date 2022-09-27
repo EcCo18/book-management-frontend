@@ -3,5 +3,5 @@ export default interface BookDto {
   id: number;
   authors: string[];
   releaseYear: string;
-  isbn: number;
+  isbn: string;
 }
