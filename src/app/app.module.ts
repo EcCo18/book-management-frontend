@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from "@angular/common/http";
 import { CreateBookComponent } from './components/create-book/create-book.component';
 import { CreateBookModalComponent } from './components/create-book/create-book-modal/create-book-modal.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { CreateBookModalComponent } from './components/create-book/create-book-m
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

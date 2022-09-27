@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalDismissReasons, NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { ModalDismissReasons, NgbModal, NgbModalRef } from "@ng-bootstrap/ng-bootstrap";
 import { CreateBookModalComponent } from "./create-book-modal/create-book-modal.component";
+import NewBookData from "../../models/NewBookData";
+import { BookService } from "../../services/book-service/book.service";
 
 @Component({
   selector: 'app-create-book',
@@ -11,17 +13,26 @@ export class CreateBookComponent implements OnInit {
 
   private closeResult = '';
 
-  constructor(private modalService: NgbModal) { }
+  constructor(
+    private modalService: NgbModal,
+    private bookService: BookService
+  ) {}
 
   ngOnInit(): void {
   }
 
   openModal() {
-    this.modalService.open(CreateBookModalComponent, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-      console.log(result);
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    const modalRef =
+      this.modalService.open(
+        CreateBookModalComponent,
+        {ariaLabelledBy: 'modal-basic-title'}
+      );
+    this.subscribeToModalData(modalRef);
+  }
+
+  private subscribeToModalData(modalRef: NgbModalRef): void {
+    modalRef.componentInstance.passEvent.subscribe((data: NewBookData) => {
+      this.bookService.postNewBook(data);
     });
   }
 
