@@ -13,6 +13,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { CreateBookComponent } from './components/create-book/create-book.component';
 import { CreateBookModalComponent } from './components/create-book/create-book-modal/create-book-modal.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BorrowNewBookComponent } from './components/borrow/borrow-new-book/borrow-new-book.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     BorrowedBooksComponent,
     LoginComponent,
     CreateBookComponent,
-    CreateBookModalComponent
+    CreateBookModalComponent,
+    BorrowNewBookComponent
   ],
   imports: [
     BrowserModule,

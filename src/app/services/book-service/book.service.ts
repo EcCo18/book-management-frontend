@@ -12,11 +12,11 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
   getAllBooks(): Observable<BookDto[]> {
+    console.log("emitted get");
     return this.http.get<BookDto[]>("/api/book");
   }
 
   postNewBook(newBook: NewBookData) {
-    console.log("emitted post");
     return this.http.post("/api/book", newBook).subscribe(response =>
       console.log(response)
     );

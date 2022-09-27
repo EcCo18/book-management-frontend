@@ -10,6 +10,7 @@
       <th scope="col">Name</th>
       <th scope="col">Autor(en)</th>
       <th scope="col">ISBN</th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
@@ -23,6 +24,11 @@
         {{ book.authors}}
       </td>
       <td>{{ book.isbn}}</td>
+      <td>
+        <button (click)="openBorrowModal()" type="button" class="btn btn-outline-primary float-end">
+          Ausleihen
+        </button>
+      </td>
     </tr>
     </tbody>
   </table>
