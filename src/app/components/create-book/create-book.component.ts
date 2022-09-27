@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { CreateBookModalComponent } from "./create-book-modal/create-book-modal.component";
 
 @Component({
   selector: 'app-create-book',
@@ -15,8 +16,8 @@ export class CreateBookComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  open(content: any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+  openModal() {
+    this.modalService.open(CreateBookModalComponent, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
       console.log(result);
     }, (reason) => {
