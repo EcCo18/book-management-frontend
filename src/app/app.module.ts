@@ -10,6 +10,7 @@ import { BorrowComponent } from './components/borrow/borrow.component';
 import { BorrowedBooksComponent } from './components/borrowed-books/borrowed-books.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from "@angular/common/http";
+import { CreateBookComponent } from './components/create-book/create-book.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from "@angular/common/http";
     AdminComponent,
     BorrowComponent,
     BorrowedBooksComponent,
-    LoginComponent
+    LoginComponent,
+    CreateBookComponent
   ],
   imports: [
     BrowserModule,
