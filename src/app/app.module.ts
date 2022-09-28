@@ -7,7 +7,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { BorrowComponent } from './components/borrow/borrow.component';
-import { BorrowedBooksComponent } from './components/borrowed-books/borrowed-books.component';
+import { ShowBorrowedBooksComponent } from './components/show-borrowed-books/show-borrowed-books.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from "@angular/common/http";
 import { CreateBookComponent } from './components/create-book/create-book.component';
@@ -22,7 +22,7 @@ import { BorrowNewBookComponent } from './components/borrow/borrow-new-book/borr
     HomeComponent,
     AdminComponent,
     BorrowComponent,
-    BorrowedBooksComponent,
+    ShowBorrowedBooksComponent,
     LoginComponent,
     CreateBookComponent,
     CreateBookModalComponent,

@@ -5,10 +5,10 @@ import BookDto from "../../models/dtos/BookDto";
 
 @Component({
   selector: 'app-borrowed-books',
-  templateUrl: './borrowed-books.component.html',
-  styleUrls: ['./borrowed-books.component.css']
+  templateUrl: './show-borrowed-books.component.html',
+  styleUrls: ['./show-borrowed-books.component.css']
 })
-export class BorrowedBooksComponent implements OnInit {
+export class ShowBorrowedBooksComponent implements OnInit {
 
   books$: Observable<BookDto[]>;
 
