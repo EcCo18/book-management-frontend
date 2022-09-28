@@ -3,7 +3,7 @@ import { Observable } from "rxjs";
 import BookDto from "../../models/dtos/BookDto";
 import { BookService } from "../../services/book-service/book.service";
 import { NgbModal, NgbModalRef } from "@ng-bootstrap/ng-bootstrap";
-import { BorrowNewBookComponent } from "./borrow-new-book/borrow-new-book.component";
+import { BorrowNewBookModalComponent } from "./borrow-new-book-modal/borrow-new-book-modal.component";
 
 @Component({
   selector: 'app-borrow',
@@ -24,7 +24,7 @@ export class BorrowComponent implements OnInit {
   openBorrowModal(): void {
     const modalRef =
       this.modalService.open(
-        BorrowNewBookComponent,
+        BorrowNewBookModalComponent,
         {ariaLabelledBy: 'modal-basic-title'}
       );
     this.subscribeToModalResult(modalRef);

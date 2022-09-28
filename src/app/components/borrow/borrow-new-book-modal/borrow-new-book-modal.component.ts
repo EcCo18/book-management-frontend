@@ -3,10 +3,10 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-borrow-new-book',
-  templateUrl: './borrow-new-book.component.html',
-  styleUrls: ['./borrow-new-book.component.css']
+  templateUrl: './borrow-new-book-modal.component.html',
+  styleUrls: ['./borrow-new-book-modal.component.css']
 })
-export class BorrowNewBookComponent implements OnInit {
+export class BorrowNewBookModalComponent implements OnInit {
 
   @Output()
   passEvent: EventEmitter<any> = new EventEmitter<any>();
