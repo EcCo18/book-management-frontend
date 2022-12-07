@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from "rxjs";
 import BookDto from "../../models/dtos/BookDto";
-import { BookService } from "../../services/book-service/book.service";
+import { BookService } from "../../services/book/book.service";
 import { NgbModal, NgbModalRef } from "@ng-bootstrap/ng-bootstrap";
 import { BorrowNewBookModalComponent } from "./borrow-new-book-modal/borrow-new-book-modal.component";
 

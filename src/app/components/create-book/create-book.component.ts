@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalDismissReasons, NgbModal, NgbModalRef } from "@ng-bootstrap/ng-bootstrap";
 import { CreateBookModalComponent } from "./create-book-modal/create-book-modal.component";
 import NewBookData from "../../models/NewBookData";
-import { BookService } from "../../services/book-service/book.service";
+import { BookService } from "../../services/book/book.service";
 import { BookMapperService } from "../../services/mapper/book-mapper.service";
 
 @Component({
