@@ -1,1 +1,10 @@
-<p>login works!</p>
+<div class="container">
+  <form class="flex-row w-50" #f="ngForm" (ngSubmit)="onSubmit()">
+    <label for="username" class="me-2">Nutzername</label>
+    <input id="username" type="text" class="form-control">
+    <label for="password" class="me-2">Passwort</label>
+    <input id="password" type="password" class="form-control">
+
+    <button class="btn btn-outline-primary mt-3">Login</button>
+  </form>
+</div>

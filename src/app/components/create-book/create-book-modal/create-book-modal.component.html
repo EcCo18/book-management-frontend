@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Neues Buch hinzufügen</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="form">
+    <div class="mb-3">
+      <label for="name">Name</label>
+      <input required formControlName="name" id="name" class="form-control">
+      <label for="isbn">ISBN</label>
+      <input required formControlName="isbn" id="isbn" class="form-control">
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button [disabled]="!form.valid" type="button" class="btn btn-outline-primary" (click)="passDataFromModal()">
+    Save
+  </button>
+</div>
